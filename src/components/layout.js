@@ -9,37 +9,50 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+import BackgroundImage from "gatsby-background-image"
+
 import "./layout.css"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
+
+  const imgData = useStaticQuery(graphql`
+    query {
+      desktop: file(relativePath: { eq: "bokeh.jpg" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 1920) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
         }
       }
     }
   `)
 
+  console.log(imgData)
+
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
+      <BackgroundImage
+        Tag="section"
+        fluid={imgData.desktop.childImageSharp.fluid}
+        backgroundColor={`#040e18`}
+        className="main-bg"
       >
-        <main>{children}</main>
-        <footer>
+        {children}
+        {/* <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+        </footer> */}
+      </BackgroundImage>
     </>
   )
 }

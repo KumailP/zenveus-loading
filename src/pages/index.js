@@ -1,20 +1,55 @@
 import React from "react"
-import { Link } from "gatsby"
+import ReactFloaterJs from "react-floaterjs"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faFacebookF,
+  faTwitter,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+
+import "../styles.css"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div className="center-main">
+      <ReactFloaterJs>
+        <h1>zenveus</h1>
+      </ReactFloaterJs>
+      <p>
+        Delivering web &amp; mobile services consistently and rapidly to
+        businesses all around the globe
+      </p>
+      <div className="social-icons">
+        <a
+          href="http://www.facebook.com/ekstek"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-icon"
+        >
+          <FontAwesomeIcon icon={faFacebookF} />
+        </a>
+        <a
+          href="http://twitter.com/zenveus"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-icon"
+        >
+          <FontAwesomeIcon icon={faTwitter} />
+        </a>
+        <a
+          href="https://www.youtube.com/channel/UC3UwpowzvxhUigHya7VQwfA"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-icon"
+        >
+          <FontAwesomeIcon icon={faYoutube} />
+        </a>
+      </div>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
 
