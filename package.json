@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "zenveus",
+  "private": false,
+  "description": "Zenveus - Coming Soon",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Kumail Pirzada <kumail@zenveus.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-brands-svg-icons": "^5.12.1",
@@ -22,10 +22,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-floaterjs": "^1.0.6",
     "react-fontawesome": "^1.7.1",
-    "react-helmet": "^5.2.1",
-    "react-spring": "^8.0.27"
+    "react-helmet": "^5.2.1"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
@@ -45,7 +43,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/KumailP/zenveus-loading"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"

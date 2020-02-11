@@ -1,5 +1,4 @@
 import React from "react"
-import ReactFloaterJs from "react-floaterjs"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faFacebookF,
@@ -16,9 +15,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <div className="center-main">
-      <ReactFloaterJs>
-        <h1>zenveus</h1>
-      </ReactFloaterJs>
+      <h1>zenveus</h1>
       <p>
         Delivering web &amp; mobile services consistently and rapidly to
         businesses all around the globe
